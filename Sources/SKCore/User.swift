@@ -34,7 +34,6 @@ public struct User {
         public var image72: String?
         public var image192: String?
         public var customProfile: CustomProfile?
-        public var locale: String?
 
         public init(profile: [String: Any]?) {
             firstName = profile?["first_name"] as? String
@@ -48,7 +47,6 @@ public struct User {
             image72 = profile?["image_72"] as? String
             image192 = profile?["image_192"] as? String
             customProfile = CustomProfile(customFields: profile?["fields"] as? [String: Any])
-            locale = profile?["locale"] as? String
         }
     }
 
@@ -72,6 +70,7 @@ public struct User {
     public var timeZoneLabel: String?
     public var timeZoneOffSet: Int?
     public var preferences: [String: Any]?
+    public var locale: String?
     // Client properties
     public var userGroups: [String: String]?
 
@@ -95,6 +94,7 @@ public struct User {
         timeZoneLabel = user?["tz_label"] as? String
         timeZoneOffSet = user?["tz_offset"] as? Int
         preferences = user?["prefs"] as? [String: Any]
+        locale = profile?["locale"] as? String
     }
 
     public init(id: String?) {
