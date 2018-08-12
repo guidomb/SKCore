@@ -94,7 +94,7 @@ public struct User {
         timeZoneLabel = user?["tz_label"] as? String
         timeZoneOffSet = user?["tz_offset"] as? Int
         preferences = user?["prefs"] as? [String: Any]
-        locale = profile?["locale"] as? String
+        locale = user?["locale"] as? String
     }
 
     public init(id: String?) {
